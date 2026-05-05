@@ -2,6 +2,26 @@
 
 Release History
 ===============
+2.0.0b2
++++++++
+* Fix default working directory for Windows containers being set to C:\\ if the image doesn't specify one.
+
+2.0.0b1
++++++++
+* Add Windows container support with CIM-based layer hashing
+* Support for mounted_cim field in security policies for Windows containers
+
+1.8.0
++++++
+* Ensure that fragments are attached to the correct manifest for a multiarch image.
+* Fixed a bug in `fragment attach`.
+
+1.7.2
+++++++
+* Fix ORAS fragment discovery for ORAS CLI >= 1.3.0
+* Fix StatefulSet/Deployment volume mount and securityContext resolution in `containers from_vn2` command to use pod template spec
+* Fix empty command array in `containers from_vn2` command overwriting image entrypoint when no command/args specified in YAML
+* Fix phantom exec_processes entries generated for non-exec probes (httpGet/tcpSocket) in `containers from_vn2` command
 
 1.7.1
 ++++++
